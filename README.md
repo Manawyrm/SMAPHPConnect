@@ -8,4 +8,5 @@ SMAPHPConnect can't read 64bit values. This would require automatic detection of
 
 
 Requires patched version of https://github.com/Manawyrm/phpmodbus
+
 SMA uses a different endianess as usual. Also the recv()-Routine needed to be modified.
