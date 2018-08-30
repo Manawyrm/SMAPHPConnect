@@ -1,0 +1,172 @@
+30051;Device class;;U32;ENUM;RO
+30053;Device type;;U32;ENUM;RO
+30057;Serial number;;U32;RAW;RO
+30059;Software package;;U32;FW;RO
+30197;Current event number;;U32;FIX0;RO
+30199;Waiting time until feed-in;s;U32;Duration;RO
+30201;Condition;;U32;ENUM;RO
+30203;Nominal power in Ok Mode;W;U32;FIX0;RO
+30205;Nominal power in Warning Mode;W;U32;FIX0;RO
+30207;Nominal power in Fault Mode;W;U32;FIX0;RO
+30211;Recommended action;;U32;ENUM;RO
+30213;Message;;U32;ENUM;RO
+30215;Fault correction measure;;U32;ENUM;RO
+30217;Grid relay/contactor;;U32;ENUM;RO
+30219;Derating;;U32;ENUM;RO
+30225;Insulation resistance;Ohms;U32;FIX0;RO
+30231;Maximum active power device;W;U32;FIX0;RO
+30233;Set active power limit;W;U32;FIX0;RO
+30247;Current event number for manufacturer;;U32;FIX0;RO
+30513;Total yield;Wh;U64;FIX0;RO
+30517;Daily yield;Wh;U64;FIX0;RO
+30521;Operating time;s;U64;Duration;RO
+30525;Feed-in time;s;U64;Duration;RO
+30529;Total yield;Wh;U32;FIX0;RO
+30531;Total yield;kWh;U32;FIX0;RO
+30533;Total yield;MWh;U32;FIX0;RO
+30535;Daily yield;Wh;U32;FIX0;RO
+30537;Daily yield;kWh;U32;FIX0;RO
+30539;Daily yield;MWh;U32;FIX0;RO
+30541;Operating time;s;U32;Duration;RO
+30543;Feed-in time;s;U32;Duration;RO
+30559;Number of events for user;;U32;FIX0;RO
+30561;Number of events for installer;;U32;FIX0;RO
+30563;Number of events for service;;U32;FIX0;RO
+30583;Grid feed-in counter reading;Wh;U32;FIX0;RO
+30599;Number of grid connections;;U32;FIX0;RO
+30775;Power;W;S32;FIX0;RO
+30777;Power L1;W;S32;FIX0;RO
+30779;Power L2;W;S32;FIX0;RO
+30781;Power L3;W;S32;FIX0;RO
+30783;Grid voltage phase L1;V;U32;FIX2;RO
+30785;Grid voltage phase L2;V;U32;FIX2;RO
+30787;Grid voltage phase L3;V;U32;FIX2;RO
+30797;Grid current phase L1;A;U32;FIX3;RO
+30799;Grid current phase L2;A;U32;FIX3;RO
+30801;Grid current phase L3;A;U32;FIX3;RO
+30803;Grid frequency;Hz;U32;FIX2;RO
+30805;Reactive power;VAr;S32;FIX0;RO
+30807;Reactive power L1;VAr;S32;FIX0;RO
+30809;Reactive power L2;VAr;S32;FIX0;RO
+30811;Reactive power L3;VAr;S32;FIX0;RO
+30813;Apparent power;VA;S32;FIX0;RO
+30815;Apparent power L1;VA;S32;FIX0;RO
+30817;Apparent power L2;VA;S32;FIX0;RO
+30819;Apparent power L3;VA;S32;FIX0;RO
+30825;Operating mode of stat.V stab., stat.V stab. config.;;U32;ENUM;RO
+30829;Reactive power set value as a %;%;S32;FIX1;RO
+30831;cosPhi setpoint, cosPhi config., direct specif.;;S32;FIX2;RO
+30833;cosPhi excit.type, cosPhi config., direct spec.;;U32;ENUM;RO
+30835;Operating mode of feed-in management;;U32;ENUM;RO
+30837;Active power limitation P, active power configuration;W;U32;FIX0;RO
+30839;Active power limitation P, active power configuration;%;U32;FIX0;RO
+30919;Oper.mode vol.maint.at Q on Dem., st.vol.maint.conf.;;U32;ENUM;RO
+30925;Connection speed of SMACOM A;;U32;ENUM;RO
+30927;Duplex mode of SMACOM A;;U32;ENUM;RO
+30929;Speedwire connection status of SMACOM A;;U32;ENUM;RO
+30931;Connection speed of SMACOM B;;U32;ENUM;RO
+30933;Duplex mode of SMACOM B;;U32;ENUM;RO
+30935;Speedwire connection status of SMACOM B;;U32;ENUM;RO
+30949;Displacement power factor ;;U32;FIX3;RO
+30975;Intermediate circuit voltage;V;S32;FIX2;RO
+31017;Current speedwire IP address;;STR32;UTF8;RO
+31025;Current speedwire subnet mask;;STR32;UTF8;RO
+31033;Current speedwire gateway address;;STR32;UTF8;RO
+31041;Current speedwire DNS server address;;STR32;UTF8;RO
+31085;Nominal power in Ok Mode;W;U32;FIX0;RO
+31159;Current spec. reactive power Q;VAr;S32;FIX0;RO
+35377;Number of events for user;;U64;FIX0;RO
+35381;Number of events for installer;;U64;FIX0;RO
+35385;Number of events for service;;U64;FIX0;RO
+40009;Operating condition;;U32;ENUM;RW
+40013;Language of the user interface;;U32;ENUM;RW
+40015;Normalized reactive power limitation by PV system ctrl;%;S16;FIX1;WO
+40016;Normalized active power limitation by PV system ctrl;%;S16;FIX0;WO
+40024;Dis.pow.factor that can be changed via PV system ctrl;;U16;FIX4;WO
+40025;"Excitation type that can be changed by PV system ctrl
+1041 = Capacitive
+1042 = Inductive";;U32;ENUM;WO
+40063;Firmware version of the main processor;;U32;FW;RO
+40065;Firmware version of the logic component;;U32;FW;RO
+40067;Serial number;;U32;RAW;RO
+40095;Voltage monitoring upper maximum threshold;V;U32;FIX2;RW
+40109;Country standard set;;U32;ENUM;RO
+40133;Grid nominal voltage;V;U32;FIX0;RW
+40135;Nominal frequency;Hz;U32;FIX2;RW
+40157;Automatic speedwire configureation switched on;;U32;ENUM;RW
+40159;Speedwire IP address;;STR32;IP4;RW
+40167;Speedwire subnet mask;;STR32;IP4;RW
+40175;Speedwire gateway address;;STR32;IP4;RW
+40185;Maximum apparent power device;VA;U32;FIX0;RO
+40195;Currently set apparent power limit;VA;U32;FIX0;RW
+40200;Operating mode of stat.V stab., stat.V stab. config.;;U32;ENUM;RW
+40204;Reactive power set value as a %;%;S32;FIX1;RW
+40206;cosPhi setpoint, cosPhi config., direct specif.;;S32;FIX2;RW
+40208;cosPhi excit.type, cosPhi config., direct spec.;;U32;ENUM;RW
+40210;Operating mode of feed-in management;;U32;ENUM;RW
+40212;Active power limitation P, active power configuration;W;U32;FIX0;RW
+40214;Active power limitation P, active power configuration;%;U32;FIX0;RW
+40216;Operating mode of active power reduction in case of overfrequency P(f);;U32;ENUM;RW
+40218;Difference between starting frequency and grid frequency, linear instantaneous power gradient configuration;Hz;U32;FIX2;RW
+40220;Difference between reset frequency and grid frequency, linear instantaneous power gradient configuration;Hz;U32;FIX2;RW
+40222;cosPhi at start point, cosPhi(P) char. config.;;U32;FIX2;RW
+40224;Excit. type at start point, cosPhi(P) char. conf.;;U32;ENUM;RW
+40226;cosPhi at end point, cosPhi(P) char. config.;;U32;FIX2;RW
+40228;Excit. type at end point, cosPhi(P) char. config.;;U32;ENUM;RW
+40230;Act. power at start point, cosPhi(P) char. config.;%;U32;FIX0;RW
+40232;Act. power at end point, cosPhi(P) char. config.;%;U32;FIX0;RW
+40234;Active power gradient;%;U32;FIX0;RW
+40238;Active power gradient, linear instantaneous power gradient configuration;%;U32;FIX0;RW
+40240;Activation of stay-set indicator function, linear instantaneous power gradient configuration;;U32;ENUM;RW
+40242;Active power gradient after reset frequency, linear instantaneous power gradient configuration;%;U32;FIX0;RW
+40244;Reactive current droop, full dynamic grid support configuration;;U32;ENUM;RW
+40250;Operating mode of dynamic grid support, dynamic grid support configuration;;U32;ENUM;RW
+40252;Lower limit, voltage dead band, full dynamic grid support configuration;%;S32;FIX0;RW
+40254;Upper limit, voltage dead band, full dynamic support configuration;%;U32;FIX0;RW
+40256;PWM inverse voltage, dynamic grid support configuration;%;U32;FIX0;RW
+40258;PWM inversion delay, dynamic grid support configuration;s;U32;FIX2;RW
+40260;Characteristic curve number of the PV system control procedure P(U);;U32;FIX0;RW
+40428;Frequency monitoring median maximum threshold;Hz;U32;FIX2;RW
+40430;Frq. monitoring median max. threshold trip. time;ms;U32;FIX0;RW
+40432;Frequency monitoring lower maximum threshold;Hz;U32;FIX2;RW
+40434;Frq. monitoring lower max. threshold trip. time;ms;U32;FIX0;RW
+40436;Frequency monitoring upper minimum threshold;Hz;U32;FIX2;RW
+40438;Frq. monitoring upper min. threshold trip. time;ms;U32;FIX0;RW
+40440;Frequency monitoring median minimum threshold;Hz;U32;FIX2;RW
+40442;Frq. monitoring median min. threshold trip. time;ms;U32;FIX0;RW
+40446;Voltage monitoring upper max. threshold trip. time;ms;U32;FIX3;RW
+40448;Voltage monitoring median maximum threshold;V;U32;FIX2;RW
+40450;Voltage monitoring median max. threshold trip.time;ms;U32;FIX0;RW
+40452;Voltage monitoring lower maximum threshold;V;U32;FIX2;RW
+40456;Voltage monitoring lower max. threshold trip. time;ms;U32;FIX0;RW
+40458;Voltage monitoring lower minimum threshold;V;U32;FIX2;RW
+40462;Voltage monitoring lower min. threshold trip. time;ms;U32;FIX0;RW
+40464;Voltage monitoring of median minimum threshold;V;U32;FIX2;RW
+40466;Voltage monitoring median min. threshold trip.time;ms;U32;FIX0;RW
+40472;Reference voltage, PV system control;V;U32;FIX0;RW
+40474;Reference correction voltage, PV system control;V;S32;FIX0;RW
+40482;Reactive power gradient;%;U32;FIX0;RW
+40484;Activation of active power gradient;;U32;ENUM;RW
+40490;Reactive power gradient, reactive power/voltage characteristic curve configuration Q(U);%;U32;FIX1;RW
+40497;MAC address;;STR32;UTF8;RO
+40513;Speedwire DNX server address;;STR32;IP4;RW
+40575;Operating mode of multifunction relay [1];;U32;ENUM;RW
+40577;Operating mode of multifunction relay [2];;U32;ENUM;RW
+40579;Operating mode of multifunction relay [3];;U32;ENUM;RW
+40581;Operating mode of multifunction relay [4];;U32;ENUM;RW
+40583;Operating mode of multifunction relay [5];;U32;ENUM;RW
+40585;Operating mode of multifunction relay [6];;U32;ENUM;RW
+40631;Device name;;STR32;UTF8;RW
+40789;Communication version;;U32;REV;RO
+40809;Revision status of the logic component;;U32;FIX0;RO
+40915;Set active power limit;W;U32;FIX0;RW
+43090;Login with Grid Guard-Code;U32;FIX0;;RW
+34109;Heat sink temperature 1;;S32;TEMP;;RO
+34113;Interior temperature 1;;S32;TEMP;;RO
+34125;External temperature 1;;S32;TEMP;;RO
+30769;DC current input 1;A;S32;FIX3;;RO
+30771;DC voltage input 1;V;S32;FIX2;;RO
+30773;DC power input 1;W;S32;FIX0;;RO
+30957;DC current input 2;A;S32;FIX3;;RO
+30959;DC voltage input 2;V;S32;FIX2;;RO
+30961;DC power input 2;W;S32;FIX0;;RO
