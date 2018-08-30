@@ -83,9 +83,7 @@
 40015;Normalized reactive power limitation by PV system ctrl;%;S16;FIX1;WO
 40016;Normalized active power limitation by PV system ctrl;%;S16;FIX0;WO
 40024;Dis.pow.factor that can be changed via PV system ctrl;;U16;FIX4;WO
-40025;"Excitation type that can be changed by PV system ctrl
-1041 = Capacitive
-1042 = Inductive";;U32;ENUM;WO
+40025;"Excitation type that can be changed by PV system ctrl 1041 = Capacitive 1042 = Inductive";;U32;ENUM;WO
 40063;Firmware version of the main processor;;U32;FW;RO
 40065;Firmware version of the logic component;;U32;FW;RO
 40067;Serial number;;U32;RAW;RO
