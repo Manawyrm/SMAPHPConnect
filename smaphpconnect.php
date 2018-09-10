@@ -2,7 +2,7 @@
 
 require_once dirname(__FILE__) . '/Phpmodbus/ModbusMaster.php';
 
-$modbus = new ModbusMaster("192.168.10.170", "TCP");
+$modbus = new ModbusMaster("sma.plenet.org", "TCP");
 
 $unitID = 3;
 
@@ -14,6 +14,7 @@ $registerToRead = [
     30781, /* Power L3 W */
     30803, /* Grid frequency Hz */
 ];
+
 
 /* ---------- Ende der Konfiguration ------------ */
 
@@ -64,28 +65,37 @@ foreach ($registerToRead as $register)
         $registerAddress = (int) $register[0];
 
         $recData = $modbus->readMultipleRegisters($unitID, $registerAddress, $registerSize);
-        $value = array_chunk($recData, 4)[0];
+        $bytes = array_chunk($recData, 4)[0];
 
-        // Daten aus Bytes in Integer umwandeln, dabei Vorzeichen beachten
-        if ($register[3] == "S32")
+        if (checkIfValid($bytes))
         {
-            // Signed value
-            $value = PhpType::bytes2signedInt($value, true);
+             // Daten aus Bytes in Integer umwandeln, dabei Vorzeichen beachten
+            if ($register[3] == "S32")
+            {
+                // Signed value
+                $value = PhpType::bytes2signedInt($bytes, false);
+            }
+            if ($register[3] == "U32")
+            {
+                // Unsigned value
+                $value = PhpType::bytes2unsignedInt($bytes, false);
+            }
+
+            // Wenn Fixkomma-Zahlen, entsprechend das Komma setzen
+            if ($register[4] == "FIX1")
+                $value /= (float) 10;
+            if ($register[4] == "FIX2")
+                $value /= (float) 100; 
+            if ($register[4] == "FIX3")
+                $value /= (float) 1000;
+
         }
-        if ($register[3] == "U32")
+        else
         {
-            // Unsigned value
-            $value = PhpType::bytes2unsignedInt($value, true);
+            $value = false; 
         }
 
-        // Wenn Fixkomma-Zahlen, entsprechend das Komma setzen
-        if ($register[4] == "FIX1")
-            $value /= (float) 10;
-        if ($register[4] == "FIX2")
-            $value /= (float) 100; 
-        if ($register[4] == "FIX3")
-            $value /= (float) 1000;
-
+       
         $data[$registerAddress] = [
             "name" => $register[1],
             "value" => $value,
@@ -99,3 +109,23 @@ foreach ($registerToRead as $register)
     }
 
 }
+
+function checkIfValid($data)
+{
+    if ($data[0] == 128 &&
+        $data[1] == 0   &&
+        $data[2] == 0   &&
+        $data[3] == 0      )
+        return false; 
+
+    if ($data[0] == 255 &&
+        $data[1] == 255 &&
+        $data[2] == 255 &&
+        $data[3] == 255    )
+        return false; 
+
+    return true; 
+}
+
+
+var_dump($data);
